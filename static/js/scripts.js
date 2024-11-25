@@ -133,21 +133,14 @@ $(window).on("load", function () {
   });
 
   var dlgtrigger = document.querySelectorAll("[data-dialog]");
-  console.log(dlgtrigger);
 
   for (let i = 0; i < dlgtrigger.length; i++) {
     var somedialog = document.getElementById(
       dlgtrigger[i].getAttribute("data-dialog")
     );
     var dlg = new DialogFx(somedialog);
-    // const element = array[index];
     dlgtrigger[i].addEventListener("click", dlg.toggle.bind(dlg));
   }
-
-  // $("").on("click", function () {
-  //   console.log(111);
-
-  // });
 
   // contact form validator
   $("#contact-form").validator();
